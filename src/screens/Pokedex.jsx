@@ -33,7 +33,7 @@ const Pokedex = ()=>{
       }
     
       React.useEffect(() => {
-        // Use useEffect to observe changes in 'results' and fetch icons
+        getpokes()
         if (results.length > 0) {
           getIcons();
         }
@@ -42,14 +42,10 @@ const Pokedex = ()=>{
     return(
         <>
         <header>
-            <button onClick={getpokes}>Filter</button>
             <NavLink to="/">
                 <h1> Pokedex</h1>
             </NavLink>
         </header>
-        <section>
-            <input type="text"/>
-        </section>
         <div className="pokedex">
           {results.map((element, index) => (
             <div key={index}>
