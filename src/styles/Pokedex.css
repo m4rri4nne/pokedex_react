@@ -1,0 +1,40 @@
+.poke_card{
+    background-color: #F6F0ED;
+    width: 280px;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.poke_card_info h3::first-letter{
+    text-transform: uppercase;
+}
+
+.poke_card_info h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.poke_card_info p{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.poke_card_image img{
+    width: 140px;
+    height: 140px;
+}
+
+.pokedex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin-top: 30px;
+}

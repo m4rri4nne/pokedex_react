@@ -1,6 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { GET_POKEMONS, GET_POKEMON_INFO } from "../api";
+import PokeCard from "../components/PokeCard";
+import { NavLink } from "react-router-dom";
+import '../styles/Pokedex.css';
 
 const Pokedex = ()=>{
     const [results, setResults] = React.useState([]);
@@ -40,22 +43,21 @@ const Pokedex = ()=>{
         <>
         <header>
             <button onClick={getpokes}>Filter</button>
-            <h1> Pokedex</h1>
+            <NavLink to="/">
+                <h1> Pokedex</h1>
+            </NavLink>
         </header>
         <section>
             <input type="text"/>
         </section>
-        <section>
-        <div>
-          <p>Pokemons</p>
+        <div className="pokedex">
           {results.map((element, index) => (
             <div key={index}>
-              <p>{element.name}</p>
-              <img src={icons[index]} alt={element.name} />
+                <PokeCard id={index} name={element.name} poke_image={icons[index]}/>
             </div>
           ))}
         </div>
-        </section>
+ 
         </>
     );
 }

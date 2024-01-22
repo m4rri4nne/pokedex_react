@@ -33,8 +33,9 @@
     list-style: none;
 }
 
-.home_menu a{
+a{
     text-decoration: none;
+    color: white;
 }
 
 .home_menu h2{

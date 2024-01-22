@@ -2,7 +2,7 @@ export const API_URL = 'https://pokeapi.co/api/v2';
 
 export function GET_POKEMONS(){
     return{
-        url: API_URL + '/pokemon?limit=10',
+        url: API_URL + '/pokemon?limit=20',
         options:{
             method: 'GET'
         }
